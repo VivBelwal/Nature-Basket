@@ -1,8 +1,9 @@
 import React from "react";
 import {Box,Container, Flex,Image, 
-    Input,Button,Text,
-    ChevronDownIcon,InputGroup,InputRightAddon} from "@chakra-ui/react";
-    import {StarIcon,SearchIcon} from "@chakra-ui/icons";
+    Input,Button,Text,Divider,Center,HStack,
+ InputGroup,InputRightAddon,InputLeftAddon} from "@chakra-ui/react";
+    import {StarIcon,SearchIcon,   ChevronDownIcon , EditIcon} from "@chakra-ui/icons";
+    
     import {
         useDisclosure,
         MenuItem,
@@ -12,8 +13,27 @@ import {Box,Container, Flex,Image,
     } from "@chakra-ui/react"
     // import { ChevronDownIcon, ChevronUpIcon } from '@chakra-ui/icons'
 
+    import CollapseEx from "./Dropdowns";
+    import {CartHover} from "../Contexts/CartHover";
+    import {useContext} from "react";
+  
+
 function Navbar (){
-    const { isOpen, onOpen, onClose } = useDisclosure()
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const {setHover} = useContext(CartHover);
+    const TrendingSearches = ['Trending Searches',
+       ' Organic',
+       ' Fresh Artisinal Breads',
+       ' Cold cuts & Seafood',
+       ' Diabetic Friendly Foods',
+       ' L’Exclusif',
+        'Healthy Alternatives',
+        'Birthdays & Anniversary Gift Hampers',
+       ' Platters & Dips',
+        'Smoked Cheese',
+        'Ice creams & Desserts',
+        'Keto-Paleo']
+        const navTop = {xl:"block",base:"none"};
     return <Box 
     border={"1px solid red"}
     width={"100%"}>
@@ -24,36 +44,60 @@ function Navbar (){
 
         </Box>
         
-        <Box>
+        <Box w = "70%" mt="5px">
 
-            <Flex >
+            <Flex w="100%" justifyContent={"space-around"} mb="5px" >
+             
+            <HStack spacing='1vw' ml={"1vw"}  >
+            {/* display={{xl:"flex", md:"none", base:"none"}} */}
+            <Box display={navTop}>
+                    
+                    <Text fontSize='1vw'>Online Slots Availability </Text>
+                
+            </Box>
+            <Divider orientation='vertical'   h="2" display={navTop}   />
 
-                <Box>
-                    <Text fontSize={'xs'}>Online Slots Availability</Text>
-                    </Box>
-                <Box>
+                <Box display={navTop}>
                     <Text fontSize={'xs'}>Fresh & Fast</Text>
+                    
                 </Box>
+                <Divider orientation='vertical'   h="2" display={navTop} />
                 <Box>
-                <Text fontSize={'xs'}>Store Locator</Text>
+                <Text fontSize={'xs'} display={navTop} >Store Locator</Text>
+                
                 </Box>
+                <Divider orientation='vertical' h="2" display={navTop}  />
                 <Box>
-                <Text fontSize={'xs'}>Contact Us</Text>
+                <Text fontSize={'xs'} display={navTop} >Contact Us</Text>
+               
                 </Box>
-
-                <Flex>
-                <Text fontSize={'xs'}>Mumbai </Text>
-                <Input 
-                 placeholder="PIN" size='xs'/>
+                <Divider orientation='vertical' h="2" display={navTop}   />
+                <Flex gap="2vw">
+             
+                 <Flex>
+                 <Text fontSize={{base: '10px', md: '15px', lg: '20px',xl:'xs' }} mt={{lg:"0px",md:"0px",sm:"5px",base:"5px",xl:"2px"}}> Mumbai </Text>
+                <ChevronDownIcon mt="5px"/>
+                </Flex>             
+          <InputGroup size='0.2vw'>
+  
+  <Input placeholder='Enter PIN code' 
+   />
+  <InputLeftAddon bg="#83B74C" children={ <EditIcon /> }/>
+</InputGroup>
                 </Flex>
+            </HStack>
 
-                <Box><Text fontSize={'xs'}>Login/Register</Text></Box>
+                
+            <Box><Text fontSize={{base: '10px', md: '15px', lg: '20px',xl:'xs' }} mt={{lg:"0px",md:"0px",sm:"5px",base:"5px",xl:"2px"}}>Login/Register</Text></Box>
+                
+
+                
             </Flex>
 
+            
 
-
-            <Flex>
-            <InputGroup size='sm'>
+            <Flex justifyContent={"space-between"}>
+            <InputGroup w='85%'>
   
     <Input placeholder='Start shopping...' 
      onMouseEnter={onOpen}
@@ -63,49 +107,57 @@ function Navbar (){
 
                 
 
-                <Menu isOpen={isOpen}>
-            {/* <MenuButton
-                variant="ghost"
-                mx={1}
-                py={[1, 2, 2]}
-                px={4}
-                borderRadius={5}
-                _hover={{ bg: "gray.700"}}
-                aria-label="Courses"
-                fontWeight="normal"
-                onMouseEnter={onOpen}
-                onMouseLeave={onClose}
-            >
-                More 
-            </MenuButton> */}
+                <Menu isOpen={isOpen}
+               >
+          
             <Box  
             pos='absolute'
-            top= ''
+            top= '20'
+           
+           
             >
             <MenuList 
             onMouseEnter={onOpen} 
             onMouseLeave={onClose}
-           
-
+            w='55vw'
+             
             >
-                <MenuItem>Menu Item 1</MenuItem>
-                <MenuItem>Menu Item 2</MenuItem>
-                <MenuItem>Menu Item 3</MenuItem>
+                {TrendingSearches.map((el,i)=>(
+                    i==0 ? <Text textAlign={"center"} color="purple" fontSize={"2vw"}>{el}</Text> : <Text textAlign={"center"} color="black">{el}</Text>
+                 
+                      
+                ))}
+              
+                
+
             </MenuList>
             </Box>
           
         </Menu>  
                 
 
-               <StarIcon color={"#83B74C"} boxSize="6"/>          
+               <StarIcon color={"#83B74C"} boxSize="6" mt="5px"/>          
 
-               <Image src="https://cdn-user-icons.flaticon.com/80433/80433099/1664360942914.svg?token=exp=1664361850~hmac=cb966b3d0dda4945d85d08ba63135e9c" 
-               alt="cart" htmlWidth={"30"}/> 
+               <Divider orientation='vertical' h="7" mt="5px"  />
                
-                <Box>
-                   
+                <Box 
+                 onMouseEnter={()=> setHover(true)}
+                 onMouseLeave={()=> setHover(false)}
+                //  _hover={<CollapseEx val={true}/>}
+                 border="1px solid red"
+                 w="2vw"
+                 mt="5px"
+                >
+                <Image src="https://cdn-user-icons.flaticon.com/80433/80433099/1664360942914.svg?token=exp=1664361850~hmac=cb966b3d0dda4945d85d08ba63135e9c" 
+               alt="cart" htmlWidth={"30"}/> 
                     </Box>
-                <Box></Box>
+                    
+                <Box pos='absolute'
+                top="5.5vw"
+                right={"1vw"}
+                zIndex='2'>
+                <CollapseEx />
+                </Box>
             </Flex>
         </Box>
 
