@@ -4,6 +4,7 @@ import {CartHover} from "../Contexts/CartHover";
 import {useContext} from "react";
 
 
+
 function CollapseEx(props) {
     const {hover} = useContext(CartHover);
     const {val} = props;
@@ -35,7 +36,7 @@ function CollapseEx(props) {
             <Button bgColor={"#83B74C"} mt="5px" mb="5px">Continue Shopping</Button>
             <Divider size={"5px"}/>
             <Text color={"purple"} fontSize={'1.5vw'}>HAND-PICKED OFFERS JUST FOR YOU</Text>
-            
+
           </Box>
         </Collapse>
       </Box>
@@ -43,3 +44,12 @@ function CollapseEx(props) {
   }
 
   export default CollapseEx
+
+  export const shopDrop = ()=>{
+    
+    return  
+  }
+
+
+ 
+
