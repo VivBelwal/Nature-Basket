@@ -3,6 +3,7 @@ import {Box,Container, Flex,Image,
     Input,Button,Text,Divider,Center,HStack,
  InputGroup,InputRightAddon,InputLeftAddon} from "@chakra-ui/react";
     import {StarIcon,SearchIcon,   ChevronDownIcon , EditIcon} from "@chakra-ui/icons";
+    import { NavLink } from "react-router-dom";
     
     import {
         useDisclosure,
@@ -39,8 +40,11 @@ function Navbar (){
     width={"100%"}>
         <Flex justifyContent="space-around">
         <Box>
+         <NavLink to='/'><Image 
+         src="https://www.naturesbasket.co.in/Images/logosnew.png?v=2"
+          alt="Nature basket"
+           /></NavLink>
          
-         <Image src="https://www.naturesbasket.co.in/Images/logosnew.png?v=2" alt="Nature basket" />
 
         </Box>
         

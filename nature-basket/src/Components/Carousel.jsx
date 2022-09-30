@@ -226,3 +226,41 @@ export const BannerImages = ()=>{
 //"https://gnbdevcdn.s3.amazonaws.com/Images/Category/dailyessentialsweb.png"
 //"https://gnbdevcdn.s3.amazonaws.com/Images/Category/Organicweb.png"
 
+const ShopbyWorImages = [
+    'https://d1z88p83zuviay.cloudfront.net/Images/lexlusif.jpg',
+    'https://d1z88p83zuviay.cloudfront.net/Images/healthy.jpg',
+    'https://d1z88p83zuviay.cloudfront.net/Images/cambay-tiger.jpg',
+    'https://d1z88p83zuviay.cloudfront.net/Images/barilla.jpg',
+    'https://d1z88p83zuviay.cloudfront.net/Images/ceres.jpg',
+    'https://d1z88p83zuviay.cloudfront.net/Images/ceres.jpg',
+    'https://d1z88p83zuviay.cloudfront.net/Images/silk.jpg',
+    'https://d1z88p83zuviay.cloudfront.net/Images/davidoff-cafe.jpg'
+]
+
+export function ShopByWor (){
+    return <Box px={'2vw'}
+    mt='2.5vh'>
+       <Carousel autoPlay={false}
+       infiniteLoop={false}
+       >
+        {ShopbyWorImages.map((el,i)=>(
+            <Box key={i} display='flex'>
+                <Image src={el}
+                alt ={i}
+                borderRadius="10" /><Image src={el}
+                alt ={i}
+                borderRadius="10" />
+                <Image src={el}
+                alt ={i}
+                borderRadius="10" />
+                <Image src={el}
+                alt ={i}
+                borderRadius="10" />
+            </Box>
+        ))}
+                  
+    </Carousel>
+       </Box>
+
+}
+
