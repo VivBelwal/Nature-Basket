@@ -25,8 +25,8 @@ export default function Home (){
     ]
 
     return(
-        <Box 
-        border={'1px solid red'}>
+        <Box mt='0vw'
+       >
             <Box 
              
               px={'2vw'}

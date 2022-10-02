@@ -17,11 +17,13 @@ import {Box,Container, Flex,Image,
     import CollapseEx from "./Dropdowns";
     import {CartHover} from "../Contexts/CartHover";
     import {useContext} from "react";
-  
+    import {NumVeri,EnterNum} from "../Pages/SignUp"
+    import {LoginPro} from "../Pages/Login"
+    import ShopByCategory from "./ShopByCategory";
 
 function Navbar (){
     const { isOpen, onOpen, onClose } = useDisclosure();
-    const {setHover} = useContext(CartHover);
+    const {setHover,login} = useContext(CartHover);
     const TrendingSearches = ['Trending Searches',
        ' Organic',
        ' Fresh Artisinal Breads',
@@ -35,8 +37,9 @@ function Navbar (){
         'Ice creams & Desserts',
         'Keto-Paleo']
         const navTop = {xl:"block",base:"none"};
-    return <Box 
-    border={"1px solid red"}
+        
+    return <Box pos="sticky" zIndex={'100'} mt='0'
+    
     width={"100%"}>
         <Flex justifyContent="space-around">
         <Box>
@@ -92,7 +95,14 @@ function Navbar (){
             </HStack>
 
                 
-            <Box><Text fontSize={{base: '10px', md: '15px', lg: '20px',xl:'xs' }} mt={{lg:"0px",md:"0px",sm:"5px",base:"5px",xl:"2px"}}>Login/Register</Text></Box>
+            <Box>
+                {login ? <LoginPro /> : <EnterNum /> }
+               
+               
+            </Box>
+            <Box>
+                
+            </Box>
                 
 
                 
@@ -148,12 +158,15 @@ function Navbar (){
                  onMouseEnter={()=> setHover(true)}
                  onMouseLeave={()=> setHover(false)}
                 //  _hover={<CollapseEx val={true}/>}
-                 border="1px solid red"
+               
                  w="2vw"
                  mt="5px"
                 >
-                <Image src="https://cdn-user-icons.flaticon.com/80433/80433099/1664360942914.svg?token=exp=1664361850~hmac=cb966b3d0dda4945d85d08ba63135e9c" 
+                    <NavLink to='/cart'>
+                    <Image src="https://cdn-user-icons.flaticon.com/80433/80433099/1664360942914.svg?token=exp=1664706623~hmac=179e7f73adf9c34d99a659d95d025c53" 
                alt="cart" htmlWidth={"30"}/> 
+                    </NavLink>
+               
                     </Box>
                     
                 <Box pos='absolute'
@@ -169,6 +182,7 @@ function Navbar (){
         <Box>
             
         </Box>
+        <ShopByCategory  />
     </Box>
 }
 

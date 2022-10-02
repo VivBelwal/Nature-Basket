@@ -106,17 +106,16 @@ export default function Footer (){
         const footerBot = [
             '© 2020 Natures Basket Limited.',
               'All rights reserved.',
-              '|',
+           
               'Privacy Policy',
-              '|',
-              'Terms of Use',
-              '|',
+          'Terms of Use',
+     
               'Home Delivery Number - 8880077745',
-              '|',
+      
               'Site Map',
-              '|',
+       
               'Mobile Site',
-              '|',
+           
               'FSSAI License Number - 11519002000496'
         ]
     return (
@@ -187,7 +186,7 @@ export default function Footer (){
 </SimpleGrid>
 
 <Divider orientation='horizontal' />
-<Flex>
+<Flex justifyContent={'space-evenly'}>
  <HStack>
     <Text>Payment Mehtod</Text>
     <SimpleGrid>
@@ -197,15 +196,20 @@ export default function Footer (){
 
  <HStack>
     <Text>Keep in Touch</Text>
-    <SimpleGrid>
-    <Image src="" alt ="" />
+    <SimpleGrid columns={5} spacing='2vw'>
+    <Image src="https://cdn-icons-png.flaticon.com/128/2111/2111393.png" alt ="face" w='2vw' />
+    <Image src='https://cdn-icons-png.flaticon.com/128/733/733579.png' alt="tweet"  w='2vw'  />
+    <Image src='https://cdn-icons-png.flaticon.com/128/174/174883.png' alt="yt"  w='2vw'  />
+    <Image src='https://cdn-icons-png.flaticon.com/128/2111/2111463.png' alt="insta"  w='2vw' />
+    <Image src='https://cdn-icons-png.flaticon.com/128/2504/2504932.png' alt="pint"  w='2vw' />
+    
     </SimpleGrid>
  </HStack>
 </Flex>
 
 <Divider orientation='horizontal'/>
 
-<Grid>
+<Grid templateColumns='repeat(5, 1fr)' mt='2vw'>
     <Box>
         <Text> FRESH & FAST</Text>
         <Text>GIFT HAMPERS</Text>
@@ -320,13 +324,13 @@ export default function Footer (){
 <Divider orientation='horizontal'/>
 
    
-       <SimpleGrid columns={14} >
+       <HStack spacing='4vw' >
         {footerBot.map((el)=>(
-            <Text>{el}</Text>
+            <Text fontSize={'12px'}  borderRight='1px solid grey'>{el}</Text>
         ))}
         
       
-       </SimpleGrid>
+       </HStack>
         </Box>
     )
 }

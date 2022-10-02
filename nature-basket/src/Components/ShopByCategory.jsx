@@ -37,29 +37,55 @@ export default function ShopByCategory (){
 
     }
     return (
-        <Box w="100%" pr="2.5vw" pl="2.5vw">
- <HStack borderRadius={'10px'}  border='1px solid grey'>
+        <Box w="100%" pr="2.5vw" pl="2.5vw"  >
+ <HStack borderRadius={'5px'}  border='1px solid grey' justifyContent={'space-between'}>
           <Box display={'flex'}
           onMouseEnter={onOpen}
-          onMouseLeave={onClose}>
-            <Text >SHOP BY CATEGORY</Text>
-            <TriangleDownIcon />
+          onMouseLeave={onClose}
+        >
+            <Box bg="RGBA(0, 0, 0, 0.16)"   p='0.5vw'> <Text   color='#B61671'>SHOP BY CATEGORY</Text>
+           </Box>
+            <TriangleDownIcon mt='0.8vw' />
 
           </Box>
-          <Menu isOpen={isOpen}
-    >
+        
+          <Box _hover={{bg:"RGBA(0, 0, 0, 0.16)"}} p='0.5vw'>
+            <Text >MY ORDERS</Text>
+          </Box>
+          <Box _hover={{bg:"RGBA(0, 0, 0, 0.16)"}} p='0.5vw'>
+            <Text>GIFTING</Text>
+          </Box>
+          <Box _hover={{bg:"RGBA(0, 0, 0, 0.16)"}} p='0.5vw'>
+            <Text>REWARDS</Text>
+          </Box>
+          <Box _hover={{bg:"RGBA(0, 0, 0, 0.16)"}} p='0.5vw'>
+            <Text>BLOG</Text>
+          </Box>
+          <Box _hover={{bg:"RGBA(0, 0, 0, 0.16)"}} p='0.5vw'>
+            <Text>OFFERS</Text>
+          </Box>
+          <Box _hover={{bg:"RGBA(0, 0, 0, 0.16)"}} p='0.5vw'>
+            <Text>CONNOISSEUR’S SELECTION</Text>
+          </Box>
+          <Box _hover={{bg:"RGBA(0, 0, 0, 0.16)"}} p='0.5vw'>
+            <Text>BOOK STORE VISIT</Text>
+          </Box>
+         
+        
+        </HStack>
+        <Menu isOpen={isOpen}  pos='absolute'>
   
   <Box  
   pos='absolute'
   top= '20'
   
-  
+  zIndex={5}
   >
   <MenuList 
   onMouseEnter={onOpen} 
   onMouseLeave={onClose}
 w="20vw"
-
+mt='2vw'
   
   >
      {shopCato.map((el,i)=>(
@@ -68,6 +94,7 @@ w="20vw"
            pl='0.5vw'
            pr='0.5vw'
            pb={'0.5vw'} 
+           
            _hover={{bg:'#83B74C', color:"white"}}>
            <Flex justifyContent={'space-between'} onClick={handleClick(el)}>
             
@@ -84,30 +111,6 @@ w="20vw"
   </Box>
   
   </Menu>  
-          <Box>
-            <Text>MY ORDERS</Text>
-          </Box>
-          <Box>
-            <Text>GIFTING</Text>
-          </Box>
-          <Box>
-            <Text>REWARDS</Text>
-          </Box>
-          <Box>
-            <Text>BLOG</Text>
-          </Box>
-          <Box>
-            <Text>OFFERS</Text>
-          </Box>
-          <Box>
-            <Text>CONNOISSEUR’S SELECTION</Text>
-          </Box>
-          <Box>
-            <Text>BOOK STORE VISIT</Text>
-          </Box>
-         
-        
-        </HStack>
         </Box>
        
     )
