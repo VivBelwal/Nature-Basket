@@ -23,7 +23,7 @@ export const  ShopByCat = () => {
 <GridItem   >
     <Image src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/hearthealthyfoodsweb.png"alt="hearthealthyfoodsweb" />
     <Text>Heart Healthy Foods</Text>
-    <SimpleGrid columns={2} spacing={10} borderBottom="2px solid red">
+    <SimpleGrid columns={2} spacing={10} borderBottom="2px solid black">
   <Text>Amaranth Couscous Quinoa</Text>
   <ChevronRightIcon />
   <Text>Flours Rice Condiments</Text>
@@ -37,9 +37,9 @@ export const  ShopByCat = () => {
 </SimpleGrid>
   </GridItem>
   <GridItem   >
-    <Image src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/hearthealthyfoodsweb.png"alt="hearthealthyfoodsweb" />
+    <Image src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/indiangroceryweb.png"alt="hearthealthyfoodsweb" />
     <Text>Heart Healthy Foods</Text>
-    <SimpleGrid columns={2} spacing={10} borderBottom="2px solid red">
+    <SimpleGrid columns={2} spacing={10} borderBottom="2px solid black">
   <Text>Amaranth Couscous Quinoa</Text>
   <ChevronRightIcon />
   <Text>Flours Rice Condiments</Text>
@@ -53,9 +53,9 @@ export const  ShopByCat = () => {
 </SimpleGrid>
   </GridItem>
   <GridItem   >
-    <Image src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/hearthealthyfoodsweb.png"alt="hearthealthyfoodsweb" />
+    <Image src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/confectionaryweb.png"alt="hearthealthyfoodsweb" />
     <Text>Heart Healthy Foods</Text>
-    <SimpleGrid columns={2} spacing={10} borderBottom="2px solid red">
+    <SimpleGrid columns={2} spacing={10} borderBottom="2px solid black">
   <Text>Amaranth Couscous Quinoa</Text>
   <ChevronRightIcon />
   <Text>Flours Rice Condiments</Text>
@@ -69,9 +69,9 @@ export const  ShopByCat = () => {
 </SimpleGrid>
   </GridItem>
   <GridItem   >
-    <Image src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/hearthealthyfoodsweb.png"alt="hearthealthyfoodsweb" />
+    <Image src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/internationalcusineweb.png"alt="hearthealthyfoodsweb" />
     <Text>Heart Healthy Foods</Text>
-    <SimpleGrid columns={2} spacing={10} borderBottom="2px solid red">
+    <SimpleGrid columns={2} spacing={10} borderBottom="2px solid black">
   <Text>Amaranth Couscous Quinoa</Text>
   <ChevronRightIcon />
   <Text>Flours Rice Condiments</Text>
@@ -92,10 +92,10 @@ export const  ShopByCat = () => {
   gap={4}
 >
   <GridItem   >
-    <Image src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/hearthealthyfoodsweb.png"alt="hearthealthyfoodsweb" />
+    <Image src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/Exoticvegetablesweb.png"alt="hearthealthyfoodsweb" />
     <Text>Heart Healthy Foods</Text>
     <SimpleGrid columns={2}  spacingX='1px'>
-  <Text fontSize={font} >Amaranth Couscous Quinoa</Text>
+  <Text  >Amaranth Couscous Quinoa</Text>
   <ChevronRightIcon />
   <Divider orientation='horizontal' />
   <Divider orientation='horizontal' />
@@ -116,27 +116,9 @@ export const  ShopByCat = () => {
 </SimpleGrid>
   </GridItem>
   <GridItem   >
-  <Image src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/hearthealthyfoodsweb.png"alt="hearthealthyfoodsweb" />
+    <Image src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/indiangroceryweb.png"alt="hearthealthyfoodsweb" />
     <Text>Heart Healthy Foods</Text>
-    <SimpleGrid columns={2} spacing={10} borderBottom="2px solid red">
-
-  <Text>Amaranth Couscous Quinoa</Text>
-  <ChevronRightIcon />
-  
-  <Text>Flours Rice Condiments</Text>
-  <ChevronRightIcon />
-  <Text>Seafood Lean Meats</Text>
-  <ChevronRightIcon />
-  <Text>View All</Text>
-  <ChevronRightIcon />  
- 
-  
-</SimpleGrid>
-  </GridItem>
-  <GridItem   >
-  <Image src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/hearthealthyfoodsweb.png"alt="hearthealthyfoodsweb" />
-    <Text>Heart Healthy Foods</Text>
-    <SimpleGrid columns={2} spacing={10} borderBottom="2px solid red">
+    <SimpleGrid columns={2} spacing={10} borderBottom="2px solid black">
   <Text>Amaranth Couscous Quinoa</Text>
   <ChevronRightIcon />
   <Text>Flours Rice Condiments</Text>
@@ -151,6 +133,22 @@ export const  ShopByCat = () => {
   </GridItem>
   <GridItem   >
   <Image src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/hearthealthyfoodsweb.png"alt="hearthealthyfoodsweb" />
+    <Text>Heart Healthy Foods</Text>
+    <SimpleGrid columns={2} spacing={10} borderBottom="2px solid red">
+  <Text>Amaranth Couscous Quinoa</Text>
+  <ChevronRightIcon />
+  <Text>Flours Rice Condiments</Text>
+  <ChevronRightIcon />
+  <Text>Seafood Lean Meats</Text>
+  <ChevronRightIcon />
+  <Text>View All</Text>
+  <ChevronRightIcon />  
+ 
+  
+</SimpleGrid>
+  </GridItem>
+  <GridItem   >
+    <Image src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/internationalcusineweb.png"alt="hearthealthyfoodsweb" />
     <Text>Heart Healthy Foods</Text>
     <SimpleGrid columns={2} spacing={10} borderBottom="2px solid red">
   <Text>Amaranth Couscous Quinoa</Text>
@@ -245,15 +243,15 @@ export function ShopByWor (){
        >
         {ShopbyWorImages.map((el,i)=>(
             <Box key={i} display='flex'>
-                <Image src={el}
+                <Image src={ShopbyWorImages[2]}
                 alt ={i}
-                borderRadius="10" /><Image src={el}
-                alt ={i}
-                borderRadius="10" />
-                <Image src={el}
+                borderRadius="10" /><Image src={ShopbyWorImages[0]}
                 alt ={i}
                 borderRadius="10" />
-                <Image src={el}
+                <Image src={ShopbyWorImages[1]}
+                alt ={i}
+                borderRadius="10" />
+                <Image src={ShopbyWorImages[3]}
                 alt ={i}
                 borderRadius="10" />
             </Box>
