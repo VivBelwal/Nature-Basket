@@ -50,21 +50,21 @@ This project was built in 5 Days.
 
 ---
 
-![Home](https://drive.google.com/file/d/1HpzeoiluYHMQAoTTAmT0Dh1iXXlk391D/view?usp=share_link)
+![Home](https://raw.githubusercontent.com/VivBelwal/Nature-Basket/main/nature-basket/src/Images/Home.png)
 
 <br/>
 
-![Login](https://drive.google.com/file/d/1lSyNZ5Jub_bESsPmItZ9ICebAxJlxYNB/view)
-
-<br/>
-<br/>
-
-![Shop By Category](https://drive.google.com/file/d/1wNNTlU1JcMWKBNwA5fFRjhxdRM6HJKue/view?usp=sharing)
+![Login](https://raw.githubusercontent.com/VivBelwal/Nature-Basket/main/nature-basket/src/Images/Login.png)
 
 <br/>
 <br/>
 
-![Cart](https://drive.google.com/file/d/1KAjgpsFg2vleGP-JxlHkwh1fiIZl2W8K/view?usp=sharing)
+![Shop By Category](https://raw.githubusercontent.com/VivBelwal/Nature-Basket/main/nature-basket/src/Images/product.png)
+
+<br/>
+<br/>
+
+![Cart](https://raw.githubusercontent.com/VivBelwal/Nature-Basket/main/nature-basket/src/Images/Cart.png)
 
 <br/>
 <br/>
