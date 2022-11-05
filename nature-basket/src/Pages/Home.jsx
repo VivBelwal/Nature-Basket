@@ -40,8 +40,8 @@ export default function Home (){
 
  <Box px={'2vw'}
  mt='2.5vh'>
-    <Carousel autoPlay={false}
-    infiniteLoop={false}
+    <Carousel autoPlay={true}
+    infiniteLoop={true}
     breakPoints={{xl:4}}>
                
                     {bannerImages.map((el,i)=>(
