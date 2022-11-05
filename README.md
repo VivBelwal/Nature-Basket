@@ -50,32 +50,24 @@ This project was built in 5 Days.
 
 ---
 
-![Home]()
+![Home](https://drive.google.com/file/d/1HpzeoiluYHMQAoTTAmT0Dh1iXXlk391D/view?usp=share_link)
 
 <br/>
 
-![Login]()
-
-<br/>
-<br/>
-
-![Shop By Category]()
+![Login](https://drive.google.com/file/d/1lSyNZ5Jub_bESsPmItZ9ICebAxJlxYNB/view)
 
 <br/>
 <br/>
 
-![Cart]()
+![Shop By Category](https://drive.google.com/file/d/1wNNTlU1JcMWKBNwA5fFRjhxdRM6HJKue/view?usp=sharing)
 
 <br/>
 <br/>
 
-![Footer]()
+![Cart](https://drive.google.com/file/d/1KAjgpsFg2vleGP-JxlHkwh1fiIZl2W8K/view?usp=sharing)
 
 <br/>
 <br/>
 
-![Add to cart]()
 
-<br/>
-<br/>
 
